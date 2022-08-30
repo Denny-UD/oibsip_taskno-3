@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Convertor</title>
+		<link rel="stylesheet" href="app.css" />
+		<!-- CSS only -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="clouds.sass" />
+	</head>
+	<body>
+		<div class="sky">
+			<div class="cloud"></div>
+		</div>
+
+		<main class="main-body">
+			<h4>Temperature Convertor</h4>
+			<section class="grid-layout">
+				<div>
+					<label class="form-label" for="degrees">Degrees</label>
+					<input
+						class="form-control"
+						style="border-left: none; border-right: none; border-top: none"
+						id="degrees"
+						name="degrees"
+						value="0"
+						type="number"
+					/>
+				</div>
+				<div>
+					<label class="form-label" for="degress-type">Type</label>
+					<select
+						class="form-select form-select-md mb-5"
+						style="
+							border-left: none;
+							border-right: none;
+							border-top: none;
+							margin-bottom: 0rem !important;
+						"
+						aria-label="Default select example"
+						name="degrees-type"
+						id="degrees-type"
+					>
+						<option value="Fahrenheit">Fahrenheit</option>
+						<option value="Celsius">Celsius</option>
+					</select>
+				</div>
+				<div class="grid-col-span-2">
+					<label class="form-label" for="result">Result</label>
+					<input
+						readonly
+						class="form-control"
+						style="border-left: none; border-right: none; border-top: none"
+						id="result"
+						name="result"
+						type="text"
+						value=""
+					/>
+				</div>
+				<div class="grid-col-span-2">
+					<button type="button" class="btn btn-primary btn-md" id="convert">
+						Convert
+					</button>
+				</div>
+			</section>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
